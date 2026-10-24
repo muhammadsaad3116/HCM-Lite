@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCM Lite | Employees</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <header class="topbar">
+            <h1>HCM Lite</h1>
+            <button class="logout-btn" id="logout-btn">Logout</button>
+        </header>
+
+        <main class="dashboard-content">
+            <a href="admin.html">← Back to Dashboard</a>
+
+            <h2 class="section-heading">Employee Management</h2>
+            <p class="welcome-text">Add and manage your company employees.</p>
+
+            <section class="employee-form">
+                <h2>Add New Employee</h2>
+
+                <form id="employee-form">
+                    <input type="text" id="employee-name"
+                        placeholder="Employee Full Name" required>
+
+                    <input type="email" id="employee-email"
+                        placeholder="Employee Email" required>
+
+                    <input type="password" id="employee-password"
+                        placeholder="Employee Password" required>
+
+                    <input type="text" id="employee-department"
+                        placeholder="Department" required>
+
+                    <input type="number" id="employee-salary"
+                        placeholder="Monthly Salary (PKR)"
+                        min="1" required>
+
+                    <button type="submit">Add Employee</button>
+                </form>
+
+                <p id="employee-message"></p>
+            </section>
+
+            <section class="employee-list-section">
+                <h2>All Employees</h2>
+
+                <input type="text" id="search-employee"
+                    placeholder="Search employees by name or email">
+
+                <div id="employee-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/employees.js"></script>
+</body>
+</html>

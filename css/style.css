@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-container {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+.auth-container > p {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+
+.password-box {
+    position: relative;
+    width: 100%;
+}
+
+.password-box input {
+    padding-right: 45px;
+}
+
+.password-box .eye-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 42px;
+    height: 43px;
+    padding: 0;
+    background: transparent;
+    color: #475569;
+    font-size: 18px;
+}
+
+.password-box .eye-btn:hover {
+    background: transparent;
+}
+
+
+.dashboard {
+    width: 100%;
+    min-height: 100vh;
+    background: #f1f5f9;
+}
+
+.topbar {
+    background: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    gap: 15px;
+}
+
+.topbar h1 {
+    margin: 0;
+}
+
+.topbar span {
+    color: #334155;
+    margin-right: 15px;
+}
+
+.logout-btn {
+    width: auto;
+    padding: 10px 18px;
+    background: #dc2626;
+}
+
+.logout-btn:hover {
+    background: #b91c1c;
+}
+
+.dashboard-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+.welcome-text {
+    color: #64748b;
+    margin: 10px 0 25px;
+}
+
+.stats-grid,
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.stat-card,
+.menu-card {
+    background: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card p {
+    color: #2563eb;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.section-heading {
+    margin: 35px 0 20px;
+}
+
+.menu-card {
+    text-decoration: none;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+    transition: 0.2s;
+}
+
+.menu-card:hover {
+    transform: translateY(-3px);
+    border-color: #2563eb;
+}
+
+.menu-card p {
+    color: #64748b;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    .stats-grid,
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar {
+        flex-wrap: wrap;
+    }
+
+    .dashboard-content {
+        padding: 25px 15px;
+    }
+}
+
+
+.employee-form,
+.employee-list-section {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.employee-form h2,
+.employee-list-section h2 {
+    margin-bottom: 20px;
+}
+
+.employee-form input,
+.employee-list-section input {
+    display: block;
+}
+
+.employee-form button {
+    margin-bottom: 10px;
+}
+
+.employee-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 18px;
+    margin-top: 15px;
+    overflow-wrap: anywhere;
+}
+
+.employee-card h3 {
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.employee-card p {
+    color: #64748b;
+    margin: 7px 0;
+}
+
+.employee-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.employee-actions button {
+    width: auto;
+    padding: 9px 16px;
+}
+
+.employee-actions .delete-btn {
+    background: #dc2626;
+}
+
+.employee-actions .delete-btn:hover {
+    background: #b91c1c;
+}
+
+#employee-message {
+    margin-top: 10px;
+}
+
+@media (max-width: 500px) {
+    .employee-actions {
+        flex-wrap: wrap;
+    }
+}
+
+
+.attendance-card {
+    background: #ffffff;
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.attendance-card p {
+    margin: 8px 0;
+    color: #333333;
+}
+
+.present-status {
+    color: #15803d;
+    font-weight: bold;
+}
+
+.late-status {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.attendance-section,
+#attendanceRecord {
+    max-width: 800px;
+    margin: 25px auto;
+}
+
+.attendance-card {
+    text-align: left;
+}
+
+.dashboard-content > h2,
+.dashboard-content > .welcome-text {
+    text-align: center;
+}
+
+#checkInBtn {
+    margin-left: 12px;
+}
+
+#checkOutBtn {
+    margin-right: 12px;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.stats-grid .stat-card {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+#checkInBtn,
+#checkOutBtn {
+    display: inline-block;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#checkInBtn {
+    margin-right: 8px;
+}
+
+#checkOutBtn {
+    margin-left: 8px;
+}

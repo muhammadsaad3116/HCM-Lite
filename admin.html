@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCM Lite | Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <header class="topbar">
+            <h1>HCM Lite</h1>
+            <div>
+                <span id="admin-name"></span>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+            <h2>Admin Dashboard</h2>
+            <p class="welcome-text">Welcome back! Manage your company from here.</p>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Employees</h3>
+                    <p id="total-employees">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Today's Attendance</h3>
+                    <p id="today-attendance">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Pending Leaves</h3>
+                    <p id="pending-leaves">0</p>
+                </div>
+            </section>
+            
+            <section class="attendance-section">
+                <h2>Today's Attendance Records</h2>
+                <div id="admin-attendance-records"></div>
+            </section>
+
+
+            <h2 class="section-heading">Management</h2>
+
+            <section class="menu-grid">
+                <a href="employees.html" class="menu-card">
+                    <h3>Employees</h3>
+                    <p>Add and manage employees</p>
+                </a>
+
+                <a href="leaves.html" class="menu-card">
+                    <h3>Leave Management</h3>
+                    <p>Review employee leave requests</p>
+                </a>
+
+                <a href="settings.html" class="menu-card">
+                    <h3>Company Settings</h3>
+                    <p>Manage company information</p>
+                </a>
+
+                <a href="payslip.html" class="menu-card">
+                    <h3>Payslips</h3>
+                    <p>View salary details</p>
+                </a>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

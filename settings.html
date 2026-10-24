@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCM Lite | Company Settings</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="topbar">
+            <h1>HCM Lite</h1>
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </header>
+
+        <main class="dashboard-content">
+            <h2>Company Settings</h2>
+
+            <form id="settings-form">
+                <label>Company Name</label>
+                <input type="text" id="company-name" required>
+
+                <label>Office Start Time</label>
+                <input type="time" id="office-start" required>
+
+                <label>Grace Minutes</label>
+                <input type="number" id="grace-minutes" min="0" required>
+
+                <label>Monthly Leave Quota</label>
+                <input type="number" id="leave-quota" min="0" required>
+
+                <label>Working Days Per Month</label>
+                <input type="number" id="working-days" min="1" max="31" required>
+
+                <button type="submit">Save Settings</button>
+            </form>
+
+            <p id="settings-message"></p>
+        </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>

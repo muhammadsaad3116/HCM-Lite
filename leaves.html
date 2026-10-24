@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCM Lite | Leave Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="topbar">
+            <h1>HCM Lite</h1>
+            <button id="logout-btn">Logout</button>
+        </header>
+
+        <main class="dashboard-content">
+            <h2>Apply for Leave</h2>
+
+            <form id="leave-form">
+                <label>Leave Reason</label>
+                <input type="text" id="leave-reason" required>
+
+                <label>Start Date</label>
+                <input type="date" id="start-date" required>
+
+                <label>End Date</label>
+                <input type="date" id="end-date" required>
+
+                <button type="submit">Apply Leave</button>
+            </form>
+
+            <h2>My Leave Requests</h2>
+            <div id="leave-records"></div>
+        </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/leaves.js"></script>
+</body>
+</html>

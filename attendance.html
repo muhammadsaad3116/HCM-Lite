@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCM Lite | My Attendance</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="topbar">
+            <h1>HCM Lite</h1>
+            <button class="logout-btn" id="logout-btn">Logout</button>
+        </header>
+
+        <main class="dashboard-content">
+            <h2>My Attendance</h2>
+            <p id="employee-welcome" class="welcome-text"></p>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <h3>Today's Attendance</h3>
+                    <p>Check in and check out below</p>
+                    <button id="checkInBtn">Check In</button>
+                    <button id="checkOutBtn">Check Out</button>
+                </div>
+            </section>
+
+            <h2 class="section-heading">My Attendance Records</h2>
+            <div id="attendanceRecord"></div>
+        </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/attendance.js"></script>
+</body>
+</html>

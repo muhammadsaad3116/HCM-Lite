@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCM Lite | Payslips</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="topbar">
+            <h1>HCM Lite</h1>
+            <button id="logout-btn" class="logout-btn">Logout</button>
+        </header>
+
+        <main class="dashboard-content">
+            <h2>Employee Payslips</h2>
+
+            <label for="employee-select">Select Employee</label>
+            <select id="employee-select" required>
+                <option value="">Choose Employee</option>
+            </select>
+
+            <label for="pay-month">Salary Month</label>
+            <input type="month" id="pay-month" required>
+
+            <button id="generate-btn" type="button">Generate Payslip</button>
+            <div id="payslip-result"></div>
+        </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/payslip.js"></script>
+</body>
+</html>
